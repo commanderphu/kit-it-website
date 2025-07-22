@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  kit-it-website:
+    # Baut das Image aus dem Dockerfile im aktuellen Verzeichnis (.)
+    build: .
+    # Verwendet das gebaute Image oder zieht es, falls nicht lokal vorhanden
+    image: commandercentrale/kit-it-website:latest
+    container_name: kit-it-website
+    restart: unless-stopped
+    ports:
+      - "${PORT}:${PORT}" # Greift auf die Variable aus der .env-Datei zu
+    environment:
+      # Greift auf alle Variablen aus der .env-Datei zu
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - BUSINESS_EMAIL=${BUSINESS_EMAIL}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
