@@ -1,0 +1,5 @@
+name = "kit-it-website"
+compatibility_date = "2025-07-22"
+
+[build]
+command = "npx opennext@latest build"

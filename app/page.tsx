@@ -44,6 +44,12 @@ export default function HomePage() {
               >
                 Kontakt
               </Link>
+              <Link
+                href="https://shop.kit-it-koblenz.de"
+                className="text-corporate-gray dark:text-gray-300 hover:text-corporate-gold dark:hover:text-corporate-gold transition-colors"
+              >
+                Shop
+              </Link>
               <ThemeSwitcher />
             </nav>
             <div className="flex items-center space-x-4">
